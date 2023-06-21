@@ -1,0 +1,54 @@
+section {
+	&#hero {
+		@include adaptiveValue("padding-top", 51, 45);
+	}
+	&#about {
+		position: relative;
+		.section__container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&::before{
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: $mainHighlightColor;
+			height: 79%;
+		}
+		img.sphere {
+			position: absolute;
+			@include adaptiveValue("height", 485, 186, 1920, 320);
+			&.right {
+				top: 5%;
+				right: 0;
+			}
+			&.left {
+				bottom: 20%;
+				left: 0;
+			}
+		}
+	}
+	&#how {
+		margin-bottom: rem(60);
+	}
+	&#presentation {
+		margin-bottom: rem(60);
+	}
+}
+
+h1 {
+	margin-bottom: rem(35);
+	@include adaptiveValue("font-size", 80, 24);
+	line-height: math.div(94, 80);
+	font-weight: 700;
+	text-align: center;
+}
+h2 {
+	@include adaptiveValue("font-size", 80, 24);
+	line-height: math.div(94, 80);
+	font-weight: 700;
+	text-align: center;
+}

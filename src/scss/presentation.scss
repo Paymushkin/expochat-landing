@@ -1,0 +1,53 @@
+.presentation {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("gap", 0, 20);
+	padding: rem(55) rem(60);
+	border-radius: rem(60);
+	background-color: $mainHighlightColor;
+	@media (max-width:$mobile){
+		  flex-direction: column-reverse;
+		  padding: rem(30) rem(15);
+		  border-radius: rem(35);
+	}
+	&__media {
+		flex: 0 1 50%;
+		background-color: #fff;
+		border-radius: rem(20);
+		// padding-bottom: rem(50);
+		@media (max-width:$mobile){
+			width: 100%;
+		}
+		img, iframe {
+			max-width: 100%;
+			min-height: rem(250);
+			max-height: 25rem;
+			@include adaptiveValue("max-height", 500, 300, 1920, 992);
+			background-color: transparent;
+			overflow: hidden;
+			aspect-ratio: 16/10;
+			@media (max-width:$tablet){
+				@include adaptiveValue("max-height", 300, 200, 991, 768);
+			}
+			@media (max-width:$mobile){
+				@include adaptiveValue("max-height", 500, 270, 767, 320);
+			}
+		}
+	}
+	&__text {
+		flex: 1 0 auto;
+		display: flex;
+		justify-items: center;
+		align-items: center;
+		span {
+			// display: flex;
+			margin: 0 auto;
+			@include adaptiveValue("font-size", 40, 30);
+			line-height: math.div(40, 30);
+			font-weight: 600;
+			@media (max-width:$mobile) {
+				text-align: center;
+			}
+		}
+	}
+}

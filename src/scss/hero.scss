@@ -1,0 +1,39 @@
+.hero__content {
+	position: relative;
+	margin: 0 auto;
+	// display: flex;
+	// align-items: flex-end;
+	// justify-content: center;
+	width: 100%;
+	max-width: $maxWidth;
+	overflow: hidden;
+	@include adaptiveValue("height", 821, 158, 1920, 320);
+	&::before{
+		content:'';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $mainHighlightColor;
+		@include adaptiveValue("height", 250, 70, 1920, 320);
+	}
+	img {
+		&.left {
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-height: 100%;
+			z-index: 2;
+			animation: left-hand 1s ease 1.5s 1 backwards;
+		}
+		&.right {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			max-height: percent(582, 821);
+			z-index: 1;
+			animation: right-hand 1s ease .5s 1 backwards;
+			// transform: translateX(-29%);
+		}
+	}
+}

@@ -1,0 +1,130 @@
+html 
+	include html/_head
+	body 
+		.wrapper
+			include html/_header
+			main.main-content
+				section#hero 
+					.section__container
+						h1 ExpoChats is a web-based follow-&nbsp;up tool for&nbsp;both visitors&nbsp;and&nbsp;exhibitors.
+					.hero__content 
+						img(src="@img/left-hand.png", alt="").left
+						img(src="@img/right-hand.png", alt="").right
+				section#about
+					img(src="@img/sphere-right.png", alt="").sphere.right
+					img(src="@img/sphere-left.png", alt="").sphere.left
+					.section__container
+						.about__slider.swiper
+							.about__wrapper.swiper-wrapper
+								.about__slide.swiper-slide
+									h2 Follow-up without app
+									p Nothing to download or sign up<br>Just scan other's QR code or show your own
+									.slide__content
+										img(src="@img/phone1.png", alt="").phone
+										.phone__hint.hint-1(data-aos="zoom-in", data-aos-duration="750")
+											img(src="@img/zoom1-1.png", alt="")
+											p Nothing to download or sign up<br>Just scan other's QR code or show your own
+										.phone__hint.hint-2(data-aos="zoom-in", data-aos-duration="750", data-aos-delay="250")
+											img(src="@img/zoom1-2.png", alt="")
+											p Upload business card photo to be<br>seen by those you met
+										
+								.about__slide.swiper-slide
+									h2 Collect visitor leads follow-ups<br>like a CRM
+									p Respond in any booth teammate's chat. Office staff can assist.
+									.slide__content
+										img(src="@img/phone2.png", alt="").phone
+										.phone__hint.hint-1
+											img(src="@img/zoom2-1.png", alt="")
+											p Invite booth and relevant<br>office colleagues to assist<br>visitors.
+										.phone__hint.hint-2
+											img(src="@img/zoom2-2.png", alt="")
+											p Collect leads as a team in<br>chat list.
+										//- .phone__hint.hint-3
+										//- 	p Teamchat show activity of team members 
+										//- 	img(src="@img/zoom2-3.png", alt="")
+										//- .phone__hint.hint-4
+										//- 	p All your colleagues can see your chats, and theirs to you 
+										//- 	img(src="@img/zoom2-4.png", alt="")
+								.about__slide.swiper-slide
+									h2 Collect leads as a team in chat list.
+									p Nothing to download or sigh up.<br>Just show your or scan his/her QR.
+									.slide__content
+										img(src="@img/phone3.png", alt="").phone
+										.phone__hint.hint-1
+											img(src="@img/zoom3-1.png", alt="")
+											p Inside chat: ask & answer see<br>business cards, products photos, tag<br>colleagues
+										.phone__hint.hint-2
+											img(src="@img/zoom3-2.png", alt="")
+											p Send pre-prepared messages & invite<br>remote colleagues to any chats.
+							.navigation 
+								img(src="@img/arrow-prev.svg", alt="").prev 
+								.paggination
+								img(src="@img/arrow-next.svg", alt="").next
+						a(href="", style="display:none").button Login
+				section#how.how
+					.section__container
+						.title
+							img(src="@img/sphere-how.png", alt="")
+							h2 How it Works 
+					.slides
+						div(data-count="1.")
+							img(src="@img/slide-1.png", alt="")
+							img(src="@img/slide-1-m.png", alt="").mob
+						div(data-count="2.")
+							img(src="@img/slide-2.png", alt="")
+							img(src="@img/slide-2-m.png", alt="").mob
+						div(data-count="3.")
+							img(src="@img/slide-3.png", alt="")
+							img(src="@img/slide-3-m.png", alt="").mob
+						div(data-count="4.")
+							img(src="@img/slide-4.png", alt="")
+							img(src="@img/slide-4-m.png", alt="").mob
+						div(data-count="5.")
+							img(src="@img/slide-5.png", alt="")
+							img(src="@img/slide-5-m.png", alt="").mob
+				section#presentation(style="display:none")
+					.section__container.presentation
+						.presentation__media
+							iframe(src="https://1.meyou.ru/demo/", width="100%", height="100%", frameborder="0") 
+						.presentation__text
+							span Watch our<br>presentation
+				section#how-2.how.how-2
+					.section__container
+						.title.second
+							img(src="@img/sphere-how.png", alt="")
+							h2 For organisers
+					.slides
+						div(data-count="6.")
+							img(src="@img/slide-6.png", alt="")
+							img(src="@img/slide-6-m.png", alt="").mob
+						div(data-count="7.")
+							img(src="@img/slide-7.png", alt="")
+							img(src="@img/slide-7-m.png", alt="").mob
+						div(data-count="8.")
+							img(src="@img/slide-8.png", alt="")
+							img(src="@img/slide-8-m.png", alt="").mob
+				footer#footer 
+					.section__container.footer-title
+						.title
+							img(src="@img/sphere-how.png", alt="")
+							h2 Contacts
+					.section__container.footer
+						.left
+							.logo 
+								img(src="@img/meyou.png", alt="meyou")
+								span MeYou
+							a(href="") Terms and Privacy
+						.right
+							a(href="", style="display:none").button._white Login
+							.contacts 
+								a(href="https://wa.me/+971585753302", target="_blank") 
+									img(src="@img/wa.svg", alt="")
+									span WhatsApp
+								a(href="https://t.me/didme", target="_blank")
+									img(src="@img/t.svg", alt="")
+									span Telegram
+								a(href="mailto:stepan@meyou.pro", target="_blank") 
+									img(src="@img/email.svg", alt="")
+									span Email
+			include html/_footer
+	script(src="js/app.min.js")

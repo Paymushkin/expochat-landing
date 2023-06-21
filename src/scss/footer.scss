@@ -1,0 +1,109 @@
+footer {
+	.footer-title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.title {
+		position: relative;
+		margin-left: 0;
+		margin-right: 0;
+		@include adaptiveValue("margin-top", 113, 60);
+		@include adaptiveValue("margin-bottom", 113, 60);
+		h2 {
+			display: inline-block;
+			margin: 0 auto;
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			left: 2%;
+			@include adaptiveValue("width", 380, 150, 1920, 320);
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
+	}
+	.footer {
+		display: flex;
+		padding: rem(60);
+		gap: rem(40);
+		background-image: url(../img/sphere-footer.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center right;
+		border-radius: 0 rem(60);
+		overflow: hidden;
+		@media (max-width:$mobile){
+			flex-direction: column-reverse;
+			padding: rem(30) rem(15);
+			background: linear-gradient(90deg, #FDD32A -9.68%, #FFE88C 100%)!important;
+			border-radius: 0;
+			border-top-right-radius: rem(35);
+			border-top-left-radius: rem(35);
+	    }
+		.left {
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			@media (max-width:$mobile) {
+				flex-direction: row;
+				align-items: center;
+			}
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: rem(25);
+				span {
+					font-size: rem(24);
+					font-weight: 500;
+					@media (max-width:$mobile) {
+						font-size: rem(16);
+					}
+				}
+			}
+			a {
+				color: #b8b8b8;
+				font-size: rem(13);
+				@media (max-width:$mobile) {
+					color: #000;
+					font-size: rem(16);
+				}
+			}
+		}
+		.right {
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: rem(27);
+			.contacts {
+				display: flex;
+				gap: rem(33);
+				@media (max-width:$mobileSmall) {
+					width: 100%;
+					gap: rem(15);
+					flex-direction: column;
+					align-items: stretch;
+				}
+				a {
+					display: flex;
+					align-items: center;
+					padding: rem(21);
+					gap: rem(5);
+					background-color: #fff;
+					border-radius: rem(32);
+					font-size: rem(16);
+					font-weight: 700;
+					@media (max-width:$mobileSmall) {
+						flex: 1 1 auto;
+						width: 100%;
+						font-size: rem(16);
+						padding: rem(10);
+						border-radius: rem(15);
+					}
+				}
+			}
+		}
+	}
+}
