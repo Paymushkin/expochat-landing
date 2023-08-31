@@ -15,7 +15,7 @@
 	transition: 0.3s all ease;
 	@media (any-hover: hover) {
 		&:hover {
-			color:$mainHighlightColor;
+			opacity: 0.5;
 		} 
 	}
 	&:disabled {

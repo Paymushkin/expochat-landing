@@ -6,7 +6,10 @@ html
 			main.main-content
 				section#hero 
 					.section__container
-						h1 ExpoChats is a web-based follow-&nbsp;up tool for&nbsp;both visitors&nbsp;and&nbsp;exhibitors.
+						h1 ExpoChats is 
+							span#hero-type
+							span.typer-cursor | 
+						//- | a web-based follow-&nbsp;up tool for&nbsp;both visitors&nbsp;and&nbsp;exhibitors.
 					.hero__content 
 						img(src="@img/left-hand.png", alt="").left
 						img(src="@img/right-hand.png", alt="").right
@@ -60,7 +63,7 @@ html
 								img(src="@img/arrow-prev.svg", alt="").prev 
 								.paggination
 								img(src="@img/arrow-next.svg", alt="").next
-						a(href="", style="display:none").button Login
+						a(href="#", data-popup="#login").button Login
 				section#how.how
 					.section__container
 						.title
@@ -115,7 +118,7 @@ html
 								span MeYou
 							a(href="") Terms and Privacy
 						.right
-							a(href="", style="display:none").button._white Login
+							a(href="#", data-popup="#login").button._white Login
 							.contacts 
 								a(href="https://wa.me/+971585753302", target="_blank") 
 									img(src="@img/wa.svg", alt="")
@@ -126,5 +129,6 @@ html
 								a(href="mailto:stepan@meyou.pro", target="_blank") 
 									img(src="@img/email.svg", alt="")
 									span Email
+				include html/_popup
 			include html/_footer
 	script(src="js/app.min.js")
