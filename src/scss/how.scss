@@ -72,6 +72,24 @@ section.how {
 				@include adaptiveValue("font-size", 70, 21, 1512, 480, 1);
 				font-weight: 600;
 			}
+			&.animation {
+				overflow: hidden;
+				filter: grayscale(1);
+				animation: filter 5s ease-in-out infinite;
+				&::after{
+					content:'';
+					position: absolute;
+					top: 53%;
+					left: 44%;
+					width: 100px;
+					height: 100px;
+					background-color: #fff;
+					border-radius: 50%;
+					transform: scale(0);
+					animation: flash 5s ease-in-out infinite;
+					// animation: flash 1s 5s infinite ease-in-out;
+				}
+			}
 		}
 		img {
 			
