@@ -41,7 +41,7 @@ section {
 
 h1 {
 	margin-bottom: rem(35);
-	@include adaptiveValue("font-size", 80, 24);
+	@include adaptiveValue("font-size", 50, 24);
 	line-height: math.div(94, 80);
 	font-weight: 700;
 	text-align: center;
@@ -55,4 +55,8 @@ h2 {
 
 .typer-cursor {
 	animation: typer-cursor 1s infinite;
+}
+
+._fixed-height {
+	height: rem(150);
 }
